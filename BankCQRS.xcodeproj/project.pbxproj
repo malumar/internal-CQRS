@@ -8,11 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		58D2E06D1E7BF0E70033701A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E06C1E7BF0E70033701A /* AppDelegate.swift */; };
-		58D2E06F1E7BF0E70033701A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E06E1E7BF0E70033701A /* ViewController.swift */; };
 		58D2E0721E7BF0E70033701A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D2E0701E7BF0E70033701A /* Main.storyboard */; };
 		58D2E0741E7BF0E70033701A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58D2E0731E7BF0E70033701A /* Assets.xcassets */; };
 		58D2E0771E7BF0E70033701A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58D2E0751E7BF0E70033701A /* LaunchScreen.storyboard */; };
 		58D2E0821E7BF0E80033701A /* BankCQRSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0811E7BF0E80033701A /* BankCQRSTests.swift */; };
+		58D2E08F1E7BF2AF0033701A /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E08E1E7BF2AF0033701A /* Command.swift */; };
+		58D2E0901E7BF2AF0033701A /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E08E1E7BF2AF0033701A /* Command.swift */; };
+		58D2E0951E7BF2FD0033701A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0941E7BF2FD0033701A /* ViewController.swift */; };
+		58D2E0961E7BF2FD0033701A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0941E7BF2FD0033701A /* ViewController.swift */; };
+		58D2E0981E7BF33F0033701A /* CommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0971E7BF33F0033701A /* CommandBus.swift */; };
+		58D2E0991E7BF33F0033701A /* CommandBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0971E7BF33F0033701A /* CommandBus.swift */; };
+		58D2E09B1E7BF35D0033701A /* CommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E09A1E7BF35D0033701A /* CommandHandler.swift */; };
+		58D2E09C1E7BF35D0033701A /* CommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E09A1E7BF35D0033701A /* CommandHandler.swift */; };
+		58D2E09F1E7BF4B00033701A /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E09E1E7BF4B00033701A /* EventBus.swift */; };
+		58D2E0A01E7BF4B00033701A /* EventBus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E09E1E7BF4B00033701A /* EventBus.swift */; };
+		58D2E0A21E7BF4E50033701A /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0A11E7BF4E50033701A /* EventHandler.swift */; };
+		58D2E0A31E7BF4E50033701A /* EventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0A11E7BF4E50033701A /* EventHandler.swift */; };
+		58D2E0A51E7BF5200033701A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0A41E7BF5200033701A /* Event.swift */; };
+		58D2E0A61E7BF5200033701A /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0A41E7BF5200033701A /* Event.swift */; };
+		58D2E0A91E7C37DA0033701A /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0A81E7C37DA0033701A /* EventRepository.swift */; };
+		58D2E0AA1E7C37DA0033701A /* EventRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0A81E7C37DA0033701A /* EventRepository.swift */; };
+		58D2E0AD1E7C38540033701A /* EventSourcedAggregateRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0AC1E7C38540033701A /* EventSourcedAggregateRoot.swift */; };
+		58D2E0AE1E7C38540033701A /* EventSourcedAggregateRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0AC1E7C38540033701A /* EventSourcedAggregateRoot.swift */; };
+		58D2E0B01E7C39790033701A /* EventSourcedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0AF1E7C39790033701A /* EventSourcedEntity.swift */; };
+		58D2E0B11E7C39790033701A /* EventSourcedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0AF1E7C39790033701A /* EventSourcedEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +47,6 @@
 /* Begin PBXFileReference section */
 		58D2E0691E7BF0E70033701A /* BankCQRS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BankCQRS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		58D2E06C1E7BF0E70033701A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		58D2E06E1E7BF0E70033701A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		58D2E0711E7BF0E70033701A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		58D2E0731E7BF0E70033701A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		58D2E0761E7BF0E70033701A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +54,16 @@
 		58D2E07D1E7BF0E80033701A /* BankCQRSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankCQRSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		58D2E0811E7BF0E80033701A /* BankCQRSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCQRSTests.swift; sourceTree = "<group>"; };
 		58D2E0831E7BF0E80033701A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58D2E08E1E7BF2AF0033701A /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Command.swift; path = Commands/Command.swift; sourceTree = "<group>"; };
+		58D2E0941E7BF2FD0033701A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ViewControllers/ViewController.swift; sourceTree = "<group>"; };
+		58D2E0971E7BF33F0033701A /* CommandBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandBus.swift; path = Commands/CommandBus.swift; sourceTree = "<group>"; };
+		58D2E09A1E7BF35D0033701A /* CommandHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CommandHandler.swift; path = Commands/CommandHandler.swift; sourceTree = "<group>"; };
+		58D2E09E1E7BF4B00033701A /* EventBus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventBus.swift; path = Events/EventBus.swift; sourceTree = "<group>"; };
+		58D2E0A11E7BF4E50033701A /* EventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventHandler.swift; path = Events/EventHandler.swift; sourceTree = "<group>"; };
+		58D2E0A41E7BF5200033701A /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Event.swift; path = Events/Event.swift; sourceTree = "<group>"; };
+		58D2E0A81E7C37DA0033701A /* EventRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventRepository.swift; path = Events/EventRepository.swift; sourceTree = "<group>"; };
+		58D2E0AC1E7C38540033701A /* EventSourcedAggregateRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventSourcedAggregateRoot.swift; path = Domains/EventSourcedAggregateRoot.swift; sourceTree = "<group>"; };
+		58D2E0AF1E7C39790033701A /* EventSourcedEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventSourcedEntity.swift; path = Domains/EventSourcedEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +106,11 @@
 			isa = PBXGroup;
 			children = (
 				58D2E06C1E7BF0E70033701A /* AppDelegate.swift */,
-				58D2E06E1E7BF0E70033701A /* ViewController.swift */,
+				58D2E08D1E7BF2710033701A /* ViewControllers */,
+				58D2E08C1E7BF0F30033701A /* Commands */,
+				58D2E0AB1E7C383E0033701A /* Domains */,
+				58D2E09D1E7BF4240033701A /* Events */,
+				58D2E0A71E7BF56F0033701A /* ReadModel */,
 				58D2E0701E7BF0E70033701A /* Main.storyboard */,
 				58D2E0731E7BF0E70033701A /* Assets.xcassets */,
 				58D2E0751E7BF0E70033701A /* LaunchScreen.storyboard */,
@@ -94,6 +126,51 @@
 				58D2E0831E7BF0E80033701A /* Info.plist */,
 			);
 			path = BankCQRSTests;
+			sourceTree = "<group>";
+		};
+		58D2E08C1E7BF0F30033701A /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				58D2E08E1E7BF2AF0033701A /* Command.swift */,
+				58D2E09A1E7BF35D0033701A /* CommandHandler.swift */,
+				58D2E0971E7BF33F0033701A /* CommandBus.swift */,
+			);
+			name = Commands;
+			sourceTree = "<group>";
+		};
+		58D2E08D1E7BF2710033701A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				58D2E0941E7BF2FD0033701A /* ViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		58D2E09D1E7BF4240033701A /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				58D2E09E1E7BF4B00033701A /* EventBus.swift */,
+				58D2E0A11E7BF4E50033701A /* EventHandler.swift */,
+				58D2E0A41E7BF5200033701A /* Event.swift */,
+				58D2E0A81E7C37DA0033701A /* EventRepository.swift */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		58D2E0A71E7BF56F0033701A /* ReadModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ReadModel;
+			sourceTree = "<group>";
+		};
+		58D2E0AB1E7C383E0033701A /* Domains */ = {
+			isa = PBXGroup;
+			children = (
+				58D2E0AC1E7C38540033701A /* EventSourcedAggregateRoot.swift */,
+				58D2E0AF1E7C39790033701A /* EventSourcedEntity.swift */,
+			);
+			name = Domains;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,7 +276,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				58D2E06F1E7BF0E70033701A /* ViewController.swift in Sources */,
+				58D2E0AD1E7C38540033701A /* EventSourcedAggregateRoot.swift in Sources */,
+				58D2E0A51E7BF5200033701A /* Event.swift in Sources */,
+				58D2E0B01E7C39790033701A /* EventSourcedEntity.swift in Sources */,
+				58D2E09B1E7BF35D0033701A /* CommandHandler.swift in Sources */,
+				58D2E0A21E7BF4E50033701A /* EventHandler.swift in Sources */,
+				58D2E09F1E7BF4B00033701A /* EventBus.swift in Sources */,
+				58D2E0A91E7C37DA0033701A /* EventRepository.swift in Sources */,
+				58D2E0951E7BF2FD0033701A /* ViewController.swift in Sources */,
+				58D2E0981E7BF33F0033701A /* CommandBus.swift in Sources */,
+				58D2E08F1E7BF2AF0033701A /* Command.swift in Sources */,
 				58D2E06D1E7BF0E70033701A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,7 +294,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				58D2E0AE1E7C38540033701A /* EventSourcedAggregateRoot.swift in Sources */,
+				58D2E0A61E7BF5200033701A /* Event.swift in Sources */,
+				58D2E0B11E7C39790033701A /* EventSourcedEntity.swift in Sources */,
+				58D2E09C1E7BF35D0033701A /* CommandHandler.swift in Sources */,
+				58D2E0A31E7BF4E50033701A /* EventHandler.swift in Sources */,
+				58D2E0A01E7BF4B00033701A /* EventBus.swift in Sources */,
+				58D2E0AA1E7C37DA0033701A /* EventRepository.swift in Sources */,
+				58D2E0991E7BF33F0033701A /* CommandBus.swift in Sources */,
 				58D2E0821E7BF0E80033701A /* BankCQRSTests.swift in Sources */,
+				58D2E0961E7BF2FD0033701A /* ViewController.swift in Sources */,
+				58D2E0901E7BF2AF0033701A /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -406,6 +502,7 @@
 				58D2E0881E7BF0E80033701A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		58D2E0891E7BF0E80033701A /* Build configuration list for PBXNativeTarget "BankCQRSTests" */ = {
 			isa = XCConfigurationList;
@@ -414,6 +511,7 @@
 				58D2E08B1E7BF0E80033701A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
