@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        CommandBus.sharedInstance.subscribe(BankAccountCommandHandler())
+        CommandBus.sharedInstance.subscribe(handler: BankAccountCommandHandler())
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,9 +27,9 @@ class ViewController: UIViewController {
 
     @IBAction func withdrawAction() {
         // TODO
-        let amount = self.amount
+        self.amount = self.getAmount()
         let withdrawCommand = WithdrawCommand(amount: amount)
-        CommandBus.sharedInstance.dispatch(withdrawCommand)
+        CommandBus.sharedInstance.dispatch(command: withdrawCommand)
         print("Widthdraw: \(amount)")
     }
     
@@ -40,11 +40,11 @@ class ViewController: UIViewController {
     }
     
     
-    func getAmount() -> Float {
+    func getAmount() -> Double {
         guard let amount = self.amountTextField.text else {
             return 0
         }
         
-        return Float(amount)!
+        return Double(amount)!
     }
 }

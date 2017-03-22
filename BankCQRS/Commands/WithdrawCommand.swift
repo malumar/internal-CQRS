@@ -18,8 +18,8 @@ class WithdrawCommand: Command {
     }
     
     func visit(handlers: [CommandHandler]) {
-        for _ in handlers { // replace _ with handler var
-            // TO DO: handler
+        for handler in handlers {
+            handler.handle(command: self)
         }
     }
     

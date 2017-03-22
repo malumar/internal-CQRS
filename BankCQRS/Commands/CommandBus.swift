@@ -18,11 +18,11 @@ class CommandBus: NSObject {
     
     private override init() {}
     
-    func subscribe(_ handler: CommandHandler) {
+    func subscribe(handler: CommandHandler) {
         self.handlers.append(handler)
     }
     
-    func dispatch(_ command: Command) {
+    func dispatch(command: Command) {
         self.queue.append(command)
         
         // ensure that every command a called once
