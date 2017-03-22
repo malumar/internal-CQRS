@@ -34,6 +34,8 @@
 		58D2E0B11E7C39790033701A /* EventSourcedEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58D2E0AF1E7C39790033701A /* EventSourcedEntity.swift */; };
 		DC90733B1E82BCC40034E639 /* WithdrawCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90733A1E82BCC40034E639 /* WithdrawCommand.swift */; };
 		DC90733C1E82BEDE0034E639 /* WithdrawCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90733A1E82BCC40034E639 /* WithdrawCommand.swift */; };
+		DC90733E1E82C2A70034E639 /* BankAccountCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90733D1E82C2A70034E639 /* BankAccountCommandHandler.swift */; };
+		DC90733F1E82C2A70034E639 /* BankAccountCommandHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90733D1E82C2A70034E639 /* BankAccountCommandHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		58D2E0AC1E7C38540033701A /* EventSourcedAggregateRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventSourcedAggregateRoot.swift; path = Domains/EventSourcedAggregateRoot.swift; sourceTree = "<group>"; };
 		58D2E0AF1E7C39790033701A /* EventSourcedEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventSourcedEntity.swift; path = Domains/EventSourcedEntity.swift; sourceTree = "<group>"; };
 		DC90733A1E82BCC40034E639 /* WithdrawCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WithdrawCommand.swift; path = Commands/WithdrawCommand.swift; sourceTree = "<group>"; };
+		DC90733D1E82C2A70034E639 /* BankAccountCommandHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BankAccountCommandHandler.swift; path = Commands/BankAccountCommandHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +141,7 @@
 				58D2E09A1E7BF35D0033701A /* CommandHandler.swift */,
 				58D2E0971E7BF33F0033701A /* CommandBus.swift */,
 				DC90733A1E82BCC40034E639 /* WithdrawCommand.swift */,
+				DC90733D1E82C2A70034E639 /* BankAccountCommandHandler.swift */,
 			);
 			name = Commands;
 			sourceTree = "<group>";
@@ -292,6 +296,7 @@
 				DC90733B1E82BCC40034E639 /* WithdrawCommand.swift in Sources */,
 				58D2E08F1E7BF2AF0033701A /* Command.swift in Sources */,
 				58D2E06D1E7BF0E70033701A /* AppDelegate.swift in Sources */,
+				DC90733E1E82C2A70034E639 /* BankAccountCommandHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +316,7 @@
 				DC90733C1E82BEDE0034E639 /* WithdrawCommand.swift in Sources */,
 				58D2E0961E7BF2FD0033701A /* ViewController.swift in Sources */,
 				58D2E0901E7BF2AF0033701A /* Command.swift in Sources */,
+				DC90733F1E82C2A70034E639 /* BankAccountCommandHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

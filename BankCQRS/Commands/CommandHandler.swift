@@ -7,9 +7,10 @@
 //
 
 protocol CommandHandler {
-    
+    func handle(command:WithdrawCommand)
 }
 
 extension CommandHandler {
-    
+    func handle(command:WithdrawCommand) {}
+
 }
