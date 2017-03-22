@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         // TODO
         let amount = self.amount
         let withdrawCommand = WithdrawCommand(amount: amount)
-        
+        CommandBus.sharedInstance.dispatch(withdrawCommand)
         print("Widthdraw: \(amount)")
     }
     

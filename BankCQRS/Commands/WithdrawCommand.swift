@@ -10,9 +10,9 @@ import UIKit
 
 class WithdrawCommand: Command {
     private var uuid = ""
-    private var amount = 0
+    private var amount = 0.0
     
-    init(amount: Int) {
+    init(amount: Double) {
         self.amount = amount
         uuid = UUID().uuidString
     }
