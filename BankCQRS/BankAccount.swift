@@ -9,6 +9,10 @@
 import UIKit
 
 class BankAccount {
-    private(set) var uuid: String = "" // fuck johnny
-    private(set) var balance: Double = 0.0
+    private(set) var uuid = ""
+    private(set) var balance = 0.0
+    
+    func withdraw(amount: Double) {
+        balance -= amount
+    }
 }

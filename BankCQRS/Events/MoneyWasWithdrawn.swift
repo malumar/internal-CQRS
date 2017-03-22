@@ -11,6 +11,12 @@ import UIKit
 open class MoneyWasWithdrawn: Event {
     private var amount = 0.0
     
+    override func visit(handlers: [EventHandler]) {
+        for handler in handlers {
+            handler.handle(event: self)
+        }
+    }
+    
     public static func create(rootUUID: String, amount: Double) -> MoneyWasWithdrawn {
         let event = MoneyWasWithdrawn()
         event.type = "MoneyWasWithdrawn"

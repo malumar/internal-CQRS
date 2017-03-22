@@ -10,11 +10,16 @@ import UIKit
 
 class BankAccountEventHandler: EventHandler {
     func handle(event: MoneyWasWithdrawn) {
-        load()
-        // load, edit, save read model
+        let bankAccount = load()
+        bankAccount.withdraw(amount: event.getAmount())
+        ReadModelStore.sharedInstance.bankAccounts = [bankAccount]
     }
     
-    func load() {
+    func load() -> BankAccount {
+        guard let firstBankAccount = ReadModelStore.sharedInstance.bankAccounts.first else {
+            return BankAccount()
+        }
         
+        return firstBankAccount
     }
 }

@@ -10,8 +10,10 @@ import Foundation
 
 protocol EventHandler {
     func handle(event: Event)
+    func handle(event: MoneyWasWithdrawn)
 }
 
 extension EventHandler {
     func handle(event: Event) {}
+    func handle(event: MoneyWasWithdrawn) {}
 }

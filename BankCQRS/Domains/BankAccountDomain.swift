@@ -25,12 +25,12 @@ class BankAccountDomain: EventSourcedAggregateRoot {
         }
         
         if let amount = unarchivedData["amount"] as? Double {
-            if balance - amount < 0 {
-                print("You are broke, you cannot withdraw money")
-            } else {
+            //if balance - amount < 0 {
+             //   print("You are broke, you cannot withdraw money")
+            //} else {
                 let event = MoneyWasWithdrawn.create(rootUUID: self.rootUUID, amount: amount)
                 self.apply(event: event)
-            }
+           // }
         }
     }
 

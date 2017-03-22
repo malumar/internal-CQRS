@@ -10,6 +10,6 @@ import UIKit
 
 class EventHandlerManager {
     public static func subscribeEventHandlers () {
-        EventBus.sharedInstance.subscribe(handler: BankAccountEventHandler)
+        EventBus.sharedInstance.subscribe(BankAccountEventHandler())
     }
 }
