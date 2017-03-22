@@ -10,12 +10,12 @@ import Foundation
 
 class EventSourcedAggregateRoot : NSObject {
     
-    var uncomittedEvents : [Event] = []
-    var playhead : Int = -1
-    open internal(set) var rootUUID : String = ""
+    var uncomittedEvents: [Event] = []
+    var playhead = -1
+    open internal(set) var rootUUID = ""
     
     func apply(event: Event) {
-        self.handleRecusively(event: event)
+        self.handleRecursively(event: event)
         
         self.playhead += 1
         event.rootUUID = self.rootUUID
@@ -25,7 +25,7 @@ class EventSourcedAggregateRoot : NSObject {
     
     func applyWithoutAddingEvents(event: Event) {
         self.playhead += 1
-        self.handleRecusively(event: event)
+        self.handleRecursively(event: event)
     }
     
     func getUncommittedEvents() -> [Event] {
@@ -36,7 +36,7 @@ class EventSourcedAggregateRoot : NSObject {
         return stream
     }
     
-    func handleRecusively(event: Event) {
+    func handleRecursively(event: Event) {
         self.handleEvent(event: event)
         
         for childEntity in self.getChildEntities() {

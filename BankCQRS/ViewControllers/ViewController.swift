@@ -20,11 +20,6 @@ class ViewController: UIViewController {
         CommandBus.sharedInstance.subscribe(handler: BankAccountCommandHandler())
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     @IBAction func withdrawAction() {
         // TODO
         self.amount = self.getAmount()

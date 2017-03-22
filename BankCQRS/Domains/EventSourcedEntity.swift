@@ -10,7 +10,7 @@ import Foundation
 
 class EventSourcedEntity : NSObject{
     
-    open var aggregateRoot : EventSourcedAggregateRoot? = nil
+    open var aggregateRoot: EventSourcedAggregateRoot?
     
     func getAmount() -> Int {
         return 0
@@ -34,11 +34,11 @@ class EventSourcedEntity : NSObject{
         }
     }
     
-    func apply(event : Event) {
+    func apply(event: Event) {
         self.aggregateRoot?.apply(event: event)
     }
     
     func getChildEntities() -> [EventSourcedEntity] {
-        return [];
+        return []
     }
 }
