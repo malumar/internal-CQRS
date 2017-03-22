@@ -16,11 +16,8 @@ class BankAccountDomain: EventSourcedAggregateRoot {
     }
     
     func withdrawMoney(command: WithdrawCommand) {
-        guard let data = command.getData() else {
-            return
-        }
-
-        guard let unarchivedData = NSKeyedUnarchiver.unarchiveObject(with: data) as? [String : Any] else {
+        guard let data = command.getData(),
+              let unarchivedData = NSKeyedUnarchiver.unarchiveObject(with: data) as? [String : Any] else {
             return
         }
         
@@ -31,11 +28,8 @@ class BankAccountDomain: EventSourcedAggregateRoot {
     }
     
     func depositMoney(command: DepositCommand) {
-        guard let data = command.getData() else {
-            return
-        }
-        
-        guard let unarchivedData = NSKeyedUnarchiver.unarchiveObject(with: data) as? [String : Any] else {
+        guard let data = command.getData(),
+              let unarchivedData = NSKeyedUnarchiver.unarchiveObject(with: data) as? [String : Any] else {
             return
         }
         
