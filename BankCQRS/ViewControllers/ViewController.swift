@@ -17,7 +17,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        CommandBus.sharedInstance.subscribe(handler: BankAccountCommandHandler())
     }
 
     @IBAction func withdrawAction() {

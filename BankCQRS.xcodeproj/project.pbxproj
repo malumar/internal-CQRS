@@ -42,6 +42,14 @@
 		DC9073451E82CCFB0034E639 /* MoneyWasWithdrawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073431E82CCFB0034E639 /* MoneyWasWithdrawn.swift */; };
 		DC9073471E82D25F0034E639 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073461E82D25F0034E639 /* EventStore.swift */; };
 		DC9073481E82D25F0034E639 /* EventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073461E82D25F0034E639 /* EventStore.swift */; };
+		DC90734A1E82DF9B0034E639 /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073491E82DF9B0034E639 /* BankAccount.swift */; };
+		DC90734B1E82DF9B0034E639 /* BankAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073491E82DF9B0034E639 /* BankAccount.swift */; };
+		DC90734D1E82E0C60034E639 /* BankAccountEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90734C1E82E0C60034E639 /* BankAccountEventHandler.swift */; };
+		DC90734E1E82E0C60034E639 /* BankAccountEventHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90734C1E82E0C60034E639 /* BankAccountEventHandler.swift */; };
+		DC9073511E82E1380034E639 /* CommandHandlerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073501E82E1380034E639 /* CommandHandlerManager.swift */; };
+		DC9073521E82E1380034E639 /* CommandHandlerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073501E82E1380034E639 /* CommandHandlerManager.swift */; };
+		DC9073541E82E1480034E639 /* EventHandlerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073531E82E1480034E639 /* EventHandlerManager.swift */; };
+		DC9073551E82E1480034E639 /* EventHandlerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073531E82E1480034E639 /* EventHandlerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +87,10 @@
 		DC9073401E82C75B0034E639 /* BankAccountDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BankAccountDomain.swift; path = Domains/BankAccountDomain.swift; sourceTree = "<group>"; };
 		DC9073431E82CCFB0034E639 /* MoneyWasWithdrawn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoneyWasWithdrawn.swift; path = Events/MoneyWasWithdrawn.swift; sourceTree = "<group>"; };
 		DC9073461E82D25F0034E639 /* EventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventStore.swift; path = Events/EventStore.swift; sourceTree = "<group>"; };
+		DC9073491E82DF9B0034E639 /* BankAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccount.swift; sourceTree = "<group>"; };
+		DC90734C1E82E0C60034E639 /* BankAccountEventHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BankAccountEventHandler.swift; sourceTree = "<group>"; };
+		DC9073501E82E1380034E639 /* CommandHandlerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandHandlerManager.swift; sourceTree = "<group>"; };
+		DC9073531E82E1480034E639 /* EventHandlerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHandlerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +132,7 @@
 		58D2E06B1E7BF0E70033701A /* BankCQRS */ = {
 			isa = PBXGroup;
 			children = (
+				DC90734F1E82E0EE0034E639 /* Managers */,
 				58D2E06C1E7BF0E70033701A /* AppDelegate.swift */,
 				58D2E08D1E7BF2710033701A /* ViewControllers */,
 				58D2E08C1E7BF0F30033701A /* Commands */,
@@ -172,6 +185,7 @@
 				58D2E0A81E7C37DA0033701A /* EventRepository.swift */,
 				DC9073431E82CCFB0034E639 /* MoneyWasWithdrawn.swift */,
 				DC9073461E82D25F0034E639 /* EventStore.swift */,
+				DC90734C1E82E0C60034E639 /* BankAccountEventHandler.swift */,
 			);
 			name = Events;
 			sourceTree = "<group>";
@@ -179,6 +193,7 @@
 		58D2E0A71E7BF56F0033701A /* ReadModel */ = {
 			isa = PBXGroup;
 			children = (
+				DC9073491E82DF9B0034E639 /* BankAccount.swift */,
 			);
 			name = ReadModel;
 			sourceTree = "<group>";
@@ -191,6 +206,15 @@
 				58D2E0AF1E7C39790033701A /* EventSourcedEntity.swift */,
 			);
 			name = Domains;
+			sourceTree = "<group>";
+		};
+		DC90734F1E82E0EE0034E639 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				DC9073501E82E1380034E639 /* CommandHandlerManager.swift */,
+				DC9073531E82E1480034E639 /* EventHandlerManager.swift */,
+			);
+			name = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,10 +325,14 @@
 				58D2E0B01E7C39790033701A /* EventSourcedEntity.swift in Sources */,
 				58D2E09B1E7BF35D0033701A /* CommandHandler.swift in Sources */,
 				58D2E0A21E7BF4E50033701A /* EventHandler.swift in Sources */,
+				DC90734D1E82E0C60034E639 /* BankAccountEventHandler.swift in Sources */,
 				58D2E09F1E7BF4B00033701A /* EventBus.swift in Sources */,
 				DC9073441E82CCFB0034E639 /* MoneyWasWithdrawn.swift in Sources */,
 				58D2E0A91E7C37DA0033701A /* EventRepository.swift in Sources */,
+				DC9073511E82E1380034E639 /* CommandHandlerManager.swift in Sources */,
 				DC9073411E82C75B0034E639 /* BankAccountDomain.swift in Sources */,
+				DC9073541E82E1480034E639 /* EventHandlerManager.swift in Sources */,
+				DC90734A1E82DF9B0034E639 /* BankAccount.swift in Sources */,
 				58D2E0951E7BF2FD0033701A /* ViewController.swift in Sources */,
 				DC9073471E82D25F0034E639 /* EventStore.swift in Sources */,
 				58D2E0981E7BF33F0033701A /* CommandBus.swift in Sources */,
@@ -324,10 +352,14 @@
 				58D2E0B11E7C39790033701A /* EventSourcedEntity.swift in Sources */,
 				58D2E09C1E7BF35D0033701A /* CommandHandler.swift in Sources */,
 				58D2E0A31E7BF4E50033701A /* EventHandler.swift in Sources */,
+				DC90734E1E82E0C60034E639 /* BankAccountEventHandler.swift in Sources */,
 				58D2E0A01E7BF4B00033701A /* EventBus.swift in Sources */,
 				DC9073451E82CCFB0034E639 /* MoneyWasWithdrawn.swift in Sources */,
 				58D2E0AA1E7C37DA0033701A /* EventRepository.swift in Sources */,
+				DC9073521E82E1380034E639 /* CommandHandlerManager.swift in Sources */,
 				DC9073421E82C75B0034E639 /* BankAccountDomain.swift in Sources */,
+				DC9073551E82E1480034E639 /* EventHandlerManager.swift in Sources */,
+				DC90734B1E82DF9B0034E639 /* BankAccount.swift in Sources */,
 				58D2E0991E7BF33F0033701A /* CommandBus.swift in Sources */,
 				DC9073481E82D25F0034E639 /* EventStore.swift in Sources */,
 				58D2E0821E7BF0E80033701A /* BankCQRSTests.swift in Sources */,
