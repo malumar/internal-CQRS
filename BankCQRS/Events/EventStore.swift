@@ -14,11 +14,11 @@ class EventStore {
     
     private init(){}
     
-    func save(event: Event) {
-        self.events.append(event)
+    func save(uncommittedEvents: [Event]) {
+        events.append(contentsOf: uncommittedEvents)
     }
     
     func getEvents() -> [Event] {
-        return self.events
+        return events
     }
 }

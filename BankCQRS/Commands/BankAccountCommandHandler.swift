@@ -13,6 +13,7 @@ class BankAccountCommandHandler: CommandHandler {
         print("handle cmd")
         let domain = load(uuid: "coq")
         domain.withdrawMoney(command: command)
+        save(domain: domain)
     }
     
     func load(uuid: String) -> BankAccountDomain {
@@ -23,5 +24,12 @@ class BankAccountCommandHandler: CommandHandler {
         }
         
         return bankAccountDomain
+    }
+    
+    func save(domain: BankAccountDomain) {
+        let uncommittedEvents = domain.getUncommittedEvents()
+        
+        EventStore.sharedInstance.save(uncommittedEvents: uncommittedEvents)
+        EventBus.sharedInstance.dispatch(events: uncommittedEvents)
     }
 }

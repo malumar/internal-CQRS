@@ -33,4 +33,8 @@ class BankAccountDomain: EventSourcedAggregateRoot {
             }
         }
     }
+
+    func applyMoneyWasWithdrawn(_ event: MoneyWasWithdrawn) {
+        balance -= event.getAmount()
+    }
 }
