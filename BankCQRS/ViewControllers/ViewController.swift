@@ -28,6 +28,8 @@ class ViewController: UIViewController {
     @IBAction func withdrawAction() {
         // TODO
         let amount = self.amount
+        let withdrawCommand = WithdrawCommand(amount: amount)
+        
         print("Widthdraw: \(amount)")
     }
     
