@@ -29,7 +29,7 @@ class ViewController: UIViewController {
             return
         }
         
-        balanceLabel.text = "\(balance)"
+        balanceLabel.text = "\(balance)€"
     }
     
     @IBAction func depositAction() {
