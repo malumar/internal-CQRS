@@ -10,20 +10,20 @@ import UIKit
 
 class BankAccountEventHandler: EventHandler {
     func handle(event: MoneyWasWithdrawn) {
-        let bankAccount = load()
+        let bankAccount = load(uuid: event.rootUUID)
         bankAccount.withdraw(amount: event.getAmount())
         ReadModelStore.sharedInstance.bankAccounts = [bankAccount]
     }
     
     func handle(event: MoneyWasDeposited) {
-        let bankAccount = load()
+        let bankAccount = load(uuid: event.rootUUID)
         bankAccount.deposit(amount: event.getAmount())
         ReadModelStore.sharedInstance.bankAccounts = [bankAccount]
     }
     
-    func load() -> BankAccount {
+    func load(uuid: String) -> BankAccount {
         guard let firstBankAccount = ReadModelStore.sharedInstance.bankAccounts.first else {
-            return BankAccount()
+            return BankAccount(uuid: uuid)
         }
         
         return firstBankAccount

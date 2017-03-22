@@ -12,6 +12,10 @@ class BankAccount {
     private(set) var uuid = ""
     private(set) var balance = 0.0
     
+    init(uuid: String) {
+        self.uuid = uuid
+    }
+    
     func withdraw(amount: Double) {
         balance -= amount
     }

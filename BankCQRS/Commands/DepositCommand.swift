@@ -9,12 +9,12 @@
 import UIKit
 
 class DepositCommand: Command {
-    private var uuid = ""
+    private var rootUUID = ""
     private var amount = 0.0
     
-    init(amount: Double) {
+    init(rootUUID: String, amount: Double) {
+        self.rootUUID = rootUUID
         self.amount = amount
-        uuid = UUID().uuidString
     }
     
     func visit(handlers: [CommandHandler]) {
@@ -23,20 +23,11 @@ class DepositCommand: Command {
         }
     }
     
-    func getCommandName() -> String {
-        return "DepositCommand"
+    func getRootUUID() -> String {
+        return rootUUID
     }
     
-    func getUUID() -> String {
-        return uuid
-    }
-    
-    func getData() -> Data? {
-        let data: [String: Any] = [
-            "UUID": uuid,
-            "amount": amount
-        ]
-        
-        return NSKeyedArchiver.archivedData(withRootObject: data)
+    func getAmount() -> Double {
+        return amount
     }
 }

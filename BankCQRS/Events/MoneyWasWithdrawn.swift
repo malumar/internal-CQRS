@@ -19,10 +19,9 @@ open class MoneyWasWithdrawn: Event {
     
     public static func create(rootUUID: String, amount: Double) -> MoneyWasWithdrawn {
         let event = MoneyWasWithdrawn()
-        event.type = "MoneyWasWithdrawn"
         event.amount = amount
         event.rootUUID = rootUUID
-        event.uuid = UUID().uuidString
+        event.type = "MoneyWasWithdrawn"
         
         return event
     }

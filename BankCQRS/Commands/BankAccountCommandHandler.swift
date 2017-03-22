@@ -11,15 +11,16 @@ import UIKit
 class BankAccountCommandHandler: CommandHandler {
     func handle(command: WithdrawCommand) {
         print("handle cmd")
-        let domain = load(uuid: "coq")
-        domain.withdrawMoney(command: command)
+        let domain = load(uuid: command.getRootUUID())
+        
+        domain.withdrawMoney(amount: command.getAmount())
         save(domain: domain)
     }
     
     func handle(command: DepositCommand) {
         print("handle cmd")
-        let domain = load(uuid: "coq")
-        domain.depositMoney(command: command)
+        let domain = load(uuid: command.getRootUUID())
+        domain.depositMoney(amount: command.getAmount())
         save(domain: domain)
     }
     

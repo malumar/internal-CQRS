@@ -10,9 +10,7 @@ import UIKit
 
 protocol Command {
     func visit(handlers: [CommandHandler])
-    func getCommandName() -> String
-    func getUUID() -> String
-    func getData() -> Data?
+    func getRootUUID() -> String
 }
 
 

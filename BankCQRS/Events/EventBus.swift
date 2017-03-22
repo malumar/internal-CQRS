@@ -26,7 +26,7 @@ class EventBus: NSObject {
         
         // ensure that every command a called once
         if isDispatching == false {
-            self.isDispatching = true
+            isDispatching = true
             
             while let event = self.queue.first {
                 event.visit(handlers: handlers)

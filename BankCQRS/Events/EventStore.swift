@@ -10,7 +10,7 @@ import UIKit
 
 class EventStore {
     static let sharedInstance = EventStore()
-    private var events : [Event] = []
+    private var events: [Event] = []
     
     private init(){}
     

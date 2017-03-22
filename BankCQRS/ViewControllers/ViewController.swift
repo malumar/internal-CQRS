@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var balanceLabel: UILabel!
     @IBOutlet weak var amountTextField: UITextField!
     
+    var rootUUID = UUID().uuidString
     var amount = 0.0
     
     override func viewDidLoad() {
@@ -21,7 +22,7 @@ class ViewController: UIViewController {
 
     @IBAction func withdrawAction() {
         self.amount = self.getAmount()
-        let withdrawCommand = WithdrawCommand(amount: amount)
+        let withdrawCommand = WithdrawCommand(rootUUID: rootUUID, amount: amount)
         CommandBus.sharedInstance.dispatch(command: withdrawCommand)
         
         guard let balance = ReadModelStore.sharedInstance.bankAccounts.first?.balance else {
@@ -34,7 +35,7 @@ class ViewController: UIViewController {
     
     @IBAction func depositAction() {
         self.amount = self.getAmount()
-        let depositCommand = DepositCommand(amount: amount)
+        let depositCommand = DepositCommand(rootUUID: rootUUID, amount: amount)
         CommandBus.sharedInstance.dispatch(command: depositCommand)
         
         guard let balance = ReadModelStore.sharedInstance.bankAccounts.first?.balance else {
