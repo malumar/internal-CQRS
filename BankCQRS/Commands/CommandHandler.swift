@@ -8,9 +8,13 @@
 
 protocol CommandHandler {
     func handle(command:WithdrawCommand)
+    
+    func handle(command:DepositCommand)
 }
 
 extension CommandHandler {
     func handle(command:WithdrawCommand) {}
+    
+    func handle(command:DepositCommand) {}
 
 }

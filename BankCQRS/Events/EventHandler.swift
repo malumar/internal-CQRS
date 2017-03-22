@@ -11,9 +11,11 @@ import Foundation
 protocol EventHandler {
     func handle(event: Event)
     func handle(event: MoneyWasWithdrawn)
+    func handle(event: MoneyWasDeposited)
 }
 
 extension EventHandler {
     func handle(event: Event) {}
     func handle(event: MoneyWasWithdrawn) {}
+    func handle(event: MoneyWasDeposited) {}
 }

@@ -15,4 +15,8 @@ class BankAccount {
     func withdraw(amount: Double) {
         balance -= amount
     }
+    
+    func deposit(amount: Double) {
+        balance += amount
+    }
 }

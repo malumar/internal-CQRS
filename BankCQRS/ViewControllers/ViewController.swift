@@ -24,7 +24,6 @@ class ViewController: UIViewController {
         self.amount = self.getAmount()
         let withdrawCommand = WithdrawCommand(amount: amount)
         CommandBus.sharedInstance.dispatch(command: withdrawCommand)
-        print("Widthdraw: \(amount)")
         
         guard let balance = ReadModelStore.sharedInstance.bankAccounts.first?.balance else {
             balanceLabel.text = ""
@@ -36,8 +35,16 @@ class ViewController: UIViewController {
     
     @IBAction func depositAction() {
         // TODO
-        let amount = self.amount
-        print("Widthdraw: \(amount)")
+        self.amount = self.getAmount()
+        let depositCommand = DepositCommand(amount: amount)
+        CommandBus.sharedInstance.dispatch(command: depositCommand)
+        
+        guard let balance = ReadModelStore.sharedInstance.bankAccounts.first?.balance else {
+            balanceLabel.text = ""
+            return
+        }
+        
+        balanceLabel.text = "\(balance)"
     }
     
     

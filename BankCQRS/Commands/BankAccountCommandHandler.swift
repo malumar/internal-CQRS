@@ -16,6 +16,13 @@ class BankAccountCommandHandler: CommandHandler {
         save(domain: domain)
     }
     
+    func handle(command: DepositCommand) {
+        print("handle cmd")
+        let domain = load(uuid: "coq")
+        domain.depositMoney(command: command)
+        save(domain: domain)
+    }
+    
     func load(uuid: String) -> BankAccountDomain {
         let bankAccountDomain = BankAccountDomain()
         let events = EventStore.sharedInstance.getEvents()

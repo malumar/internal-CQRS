@@ -15,6 +15,12 @@ class BankAccountEventHandler: EventHandler {
         ReadModelStore.sharedInstance.bankAccounts = [bankAccount]
     }
     
+    func handle(event: MoneyWasDeposited) {
+        let bankAccount = load()
+        bankAccount.deposit(amount: event.getAmount())
+        ReadModelStore.sharedInstance.bankAccounts = [bankAccount]
+    }
+    
     func load() -> BankAccount {
         guard let firstBankAccount = ReadModelStore.sharedInstance.bankAccounts.first else {
             return BankAccount()

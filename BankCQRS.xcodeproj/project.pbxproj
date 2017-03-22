@@ -52,6 +52,10 @@
 		DC9073551E82E1480034E639 /* EventHandlerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073531E82E1480034E639 /* EventHandlerManager.swift */; };
 		DC9073571E82E33B0034E639 /* ReadModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073561E82E33B0034E639 /* ReadModelStore.swift */; };
 		DC9073581E82E33B0034E639 /* ReadModelStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073561E82E33B0034E639 /* ReadModelStore.swift */; };
+		DC90735A1E82EA2C0034E639 /* DepositCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073591E82EA2C0034E639 /* DepositCommand.swift */; };
+		DC90735B1E82EA2C0034E639 /* DepositCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9073591E82EA2C0034E639 /* DepositCommand.swift */; };
+		DC90735D1E82EB100034E639 /* MoneyWasDeposited.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90735C1E82EB100034E639 /* MoneyWasDeposited.swift */; };
+		DC90735E1E82EB100034E639 /* MoneyWasDeposited.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC90735C1E82EB100034E639 /* MoneyWasDeposited.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +98,8 @@
 		DC9073501E82E1380034E639 /* CommandHandlerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandHandlerManager.swift; sourceTree = "<group>"; };
 		DC9073531E82E1480034E639 /* EventHandlerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventHandlerManager.swift; sourceTree = "<group>"; };
 		DC9073561E82E33B0034E639 /* ReadModelStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadModelStore.swift; sourceTree = "<group>"; };
+		DC9073591E82EA2C0034E639 /* DepositCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DepositCommand.swift; path = Commands/DepositCommand.swift; sourceTree = "<group>"; };
+		DC90735C1E82EB100034E639 /* MoneyWasDeposited.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoneyWasDeposited.swift; path = Events/MoneyWasDeposited.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +173,7 @@
 				58D2E0971E7BF33F0033701A /* CommandBus.swift */,
 				DC90733A1E82BCC40034E639 /* WithdrawCommand.swift */,
 				DC90733D1E82C2A70034E639 /* BankAccountCommandHandler.swift */,
+				DC9073591E82EA2C0034E639 /* DepositCommand.swift */,
 			);
 			name = Commands;
 			sourceTree = "<group>";
@@ -190,6 +197,7 @@
 				DC9073461E82D25F0034E639 /* EventStore.swift */,
 				DC90734C1E82E0C60034E639 /* BankAccountEventHandler.swift */,
 				DC9073561E82E33B0034E639 /* ReadModelStore.swift */,
+				DC90735C1E82EB100034E639 /* MoneyWasDeposited.swift */,
 			);
 			name = Events;
 			sourceTree = "<group>";
@@ -330,6 +338,7 @@
 				58D2E09B1E7BF35D0033701A /* CommandHandler.swift in Sources */,
 				58D2E0A21E7BF4E50033701A /* EventHandler.swift in Sources */,
 				DC90734D1E82E0C60034E639 /* BankAccountEventHandler.swift in Sources */,
+				DC90735A1E82EA2C0034E639 /* DepositCommand.swift in Sources */,
 				58D2E09F1E7BF4B00033701A /* EventBus.swift in Sources */,
 				DC9073441E82CCFB0034E639 /* MoneyWasWithdrawn.swift in Sources */,
 				58D2E0A91E7C37DA0033701A /* EventRepository.swift in Sources */,
@@ -342,6 +351,7 @@
 				58D2E0981E7BF33F0033701A /* CommandBus.swift in Sources */,
 				DC90733B1E82BCC40034E639 /* WithdrawCommand.swift in Sources */,
 				58D2E08F1E7BF2AF0033701A /* Command.swift in Sources */,
+				DC90735D1E82EB100034E639 /* MoneyWasDeposited.swift in Sources */,
 				58D2E06D1E7BF0E70033701A /* AppDelegate.swift in Sources */,
 				DC9073571E82E33B0034E639 /* ReadModelStore.swift in Sources */,
 				DC90733E1E82C2A70034E639 /* BankAccountCommandHandler.swift in Sources */,
@@ -358,6 +368,7 @@
 				58D2E09C1E7BF35D0033701A /* CommandHandler.swift in Sources */,
 				58D2E0A31E7BF4E50033701A /* EventHandler.swift in Sources */,
 				DC90734E1E82E0C60034E639 /* BankAccountEventHandler.swift in Sources */,
+				DC90735B1E82EA2C0034E639 /* DepositCommand.swift in Sources */,
 				58D2E0A01E7BF4B00033701A /* EventBus.swift in Sources */,
 				DC9073451E82CCFB0034E639 /* MoneyWasWithdrawn.swift in Sources */,
 				58D2E0AA1E7C37DA0033701A /* EventRepository.swift in Sources */,
@@ -370,6 +381,7 @@
 				58D2E0821E7BF0E80033701A /* BankCQRSTests.swift in Sources */,
 				DC90733C1E82BEDE0034E639 /* WithdrawCommand.swift in Sources */,
 				58D2E0961E7BF2FD0033701A /* ViewController.swift in Sources */,
+				DC90735E1E82EB100034E639 /* MoneyWasDeposited.swift in Sources */,
 				58D2E0901E7BF2AF0033701A /* Command.swift in Sources */,
 				DC9073581E82E33B0034E639 /* ReadModelStore.swift in Sources */,
 				DC90733F1E82C2A70034E639 /* BankAccountCommandHandler.swift in Sources */,
