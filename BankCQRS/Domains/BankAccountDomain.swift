@@ -28,7 +28,8 @@ class BankAccountDomain: EventSourcedAggregateRoot {
             if balance - amount < 0 {
                 print("You are broke, you cannot withdraw money")
             } else {
-                // TODO
+                let event = MoneyWasWithdrawn.create(rootUUID: self.rootUUID, amount: amount)
+                self.apply(event: event)
             }
         }
     }
