@@ -47,10 +47,10 @@ class ViewController: UIViewController {
     
     
     func getAmount() -> Double {
-        guard let amount = self.amountTextField.text else {
+        guard let amount = self.amountTextField.text, let finalAmount = Double(amount) else {
             return 0
         }
         
-        return Double(amount)!
+        return finalAmount
     }
 }
