@@ -23,7 +23,7 @@ class EventSourcedAggregateRoot : NSObject {
         self.uncomittedEvents.append(event)
     }
     
-    func applyWithoutAddingEvents(event: Event) {
+    open func applyWithoutAddingEvents(event: Event) {
         self.playhead += 1
         self.handleRecursively(event: event)
     }
