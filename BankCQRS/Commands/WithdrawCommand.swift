@@ -32,7 +32,7 @@ class WithdrawCommand: Command {
     }
     
     func getData() -> Data? {
-        let data : [String: Any] = [
+        let data: [String: Any] = [
             "UUID": uuid,
             "amount": amount
         ]

@@ -12,7 +12,7 @@ class EventBus: NSObject {
     open static let sharedInstance = EventBus()
     
     private var queue: [Event] = []
-    private var isDispatching: Bool = false
+    private var isDispatching = false
     private var handlers: [EventHandler] = []
     
     private override init() {}

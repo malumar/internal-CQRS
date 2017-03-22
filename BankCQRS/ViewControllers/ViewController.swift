@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     }
 
     @IBAction func withdrawAction() {
-        // TODO
         self.amount = self.getAmount()
         let withdrawCommand = WithdrawCommand(amount: amount)
         CommandBus.sharedInstance.dispatch(command: withdrawCommand)
@@ -34,7 +33,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func depositAction() {
-        // TODO
         self.amount = self.getAmount()
         let depositCommand = DepositCommand(amount: amount)
         CommandBus.sharedInstance.dispatch(command: depositCommand)

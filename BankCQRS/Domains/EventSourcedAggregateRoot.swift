@@ -10,7 +10,7 @@ import Foundation
 
 class EventSourcedAggregateRoot : NSObject {
     
-    var uncomittedEvents: [Event] = []
+    var uncommittedEvents: [Event] = []
     var playhead = -1
     open internal(set) var rootUUID = ""
     
@@ -20,7 +20,7 @@ class EventSourcedAggregateRoot : NSObject {
         self.playhead += 1
         event.rootUUID = self.rootUUID
         event.playhead = NSNumber(value: self.playhead)
-        self.uncomittedEvents.append(event)
+        self.uncommittedEvents.append(event)
     }
     
     open func applyWithoutAddingEvents(event: Event) {
@@ -29,9 +29,9 @@ class EventSourcedAggregateRoot : NSObject {
     }
     
     func getUncommittedEvents() -> [Event] {
-        let stream = self.uncomittedEvents
+        let stream = self.uncommittedEvents
         
-        self.uncomittedEvents = []
+        self.uncommittedEvents = []
         
         return stream
     }

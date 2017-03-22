@@ -13,7 +13,7 @@ class CommandBus: NSObject {
     open static let sharedInstance = CommandBus()
     
     private var queue: [Command] = []
-    private var isDispatching: Bool = false
+    private var isDispatching = false
     private var handlers: [CommandHandler] = []
     
     private override init() {}
